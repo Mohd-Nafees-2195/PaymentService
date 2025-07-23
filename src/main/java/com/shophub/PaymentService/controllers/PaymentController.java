@@ -21,8 +21,8 @@ public class PaymentController {
         response.setUrl(paymentService.createPaymentLink(request.getOrderId()));
         return response;
     }
-    @GetMapping
-    public String test(){
+    @PostMapping("/api/webhooks")
+    public String test(@RequestBody Object object){
         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@####################################**********************************************************************");
         return "Success";
     }
